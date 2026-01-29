@@ -31,4 +31,6 @@ python main.py
 [ ] Sprint 3: Refactorización Arquitectónica (Utils).
 
 [ ] Sprint 4: Persistencia de cálculos en CSV para histórico de nóminas.
+
+[ ] Sprint 5: Refactorización a Programación Orientada a Objetos (POO).
 ```
