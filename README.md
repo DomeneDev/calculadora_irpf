@@ -16,7 +16,7 @@ calculadora_irpf/
 ├── irpf_logic.py        # Motor de cálculo (lógica progresiva).
 └── README.md            # Documentación del proyecto.
 🛠️ Instalación y Uso
-Asegúrate de tener instalado Python 3.9 o superior.
+Asegúrate de tener instalado Python 3.10 o superior.
 
 Ejecuta el programa principal:
 
