@@ -28,5 +28,9 @@ python main.py
 
 [ ] Sprint 2: Manejo de excepciones para entradas de sueldo negativas o no numéricas.
 
-[ ] Sprint 3: Persistencia de cálculos en CSV para histórico de nóminas.
+[ ] Sprint 3: Refactorización Arquitectónica (Utils).
+
+[ ] Sprint 4: Persistencia de cálculos en CSV para histórico de nóminas.
+
+[ ] Sprint 5: Refactorización a Programación Orientada a Objetos (POO).
 ```
