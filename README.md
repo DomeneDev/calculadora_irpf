@@ -20,10 +20,10 @@ calculadora_irpf/
 Asegúrate de tener instalado Python 3.10 o superior.
 
 Ejecuta el programa principal:
-
+```plintext
 Bash
-
 python main.py
+```
 🛡️ Roadmap de Aprendizaje
 [x] Sprint 1: Lógica core de tramos y listas de tuplas .
 
