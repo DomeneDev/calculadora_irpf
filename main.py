@@ -19,11 +19,26 @@ def ejecutar_calculadora():
         print("| 2 - Salir del programa       |")
         print("+------------------------------+\n")
         # Solictamos opción al usuario
-        opcion = int(input("Seleccione una opción: "))
+        while True:
+            opcion = input("Seleccione una opción: ").strip()
+            try:
+                opcion = int(opcion)
+                break
+            except ValueError:
+                print("🛑 Opción no válida, debe ser un número entero")
         print("")
         match opcion:
             case 1:
-                bruto = float(input("Introduce tu sueldo bruto: "))
+                while True:
+                    bruto = input("Introduce tu sueldo bruto: ").strip()
+                    try:
+                        bruto = float(bruto)
+                        if bruto < 0:
+                            print("🛑 El suelo no puede ser negativo")
+                            continue
+                        break
+                    except ValueError:
+                        print("🛑 Error debe introducir un valor válido..")
                 retencion = calcular_retencion(bruto)
                 informe = generar_informe(bruto, retencion)
                 # Mostramos los datos formateados
