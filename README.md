@@ -15,6 +15,7 @@ calculadora_irpf/
 ├── main.py              # Interfaz de usuario y desglose de resultados.
 ├── irpf_logic.py        # Motor de cálculo (lógica progresiva).
 └── README.md            # Documentación del proyecto.
+```
 🛠️ Instalación y Uso
 Asegúrate de tener instalado Python 3.10 o superior.
 
@@ -24,13 +25,13 @@ Bash
 
 python main.py
 🛡️ Roadmap de Aprendizaje
-[x] Sprint 1: Lógica core de tramos y listas de tuplas (Estado actual).
+[x] Sprint 1: Lógica core de tramos y listas de tuplas .
 
-[ ] Sprint 2: Manejo de excepciones para entradas de sueldo negativas o no numéricas.
+[x] Sprint 2: Manejo de excepciones para entradas de sueldo negativas o no numéricas (Estado actual).
 
 [ ] Sprint 3: Refactorización Arquitectónica (Utils).
 
 [ ] Sprint 4: Persistencia de cálculos en CSV para histórico de nóminas.
 
 [ ] Sprint 5: Refactorización a Programación Orientada a Objetos (POO).
-```
+
