@@ -56,6 +56,8 @@ def generar_informe(sueldo_bruto: float, retencion: float) -> dict:
     Returns:
         dict: Diccionario con la métricas: neto, porcentaje de retencion  (2f)
     """
+    if sueldo_bruto == 0:
+        return 0
     # Cálculo de sueldo neto
     sueldo_neto = round(sueldo_bruto - retencion, 2)
     # Cálculo de porcentaje de retención
