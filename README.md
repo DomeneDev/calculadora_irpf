@@ -25,11 +25,12 @@ Bash
 python main.py
 ```
 🛡️ Roadmap de Aprendizaje
+
 [x] Sprint 1: Lógica core de tramos y listas de tuplas .
 
 [x] Sprint 2: Manejo de excepciones para entradas de sueldo negativas o no numéricas (Estado actual).
 
-[ ] Sprint 3: Refactorización Arquitectónica (Utils).
+[x] Sprint 3: Refactorización Arquitectónica (Utils).
 
 [ ] Sprint 4: Persistencia de cálculos en CSV para histórico de nóminas.
 
