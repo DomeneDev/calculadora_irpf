@@ -3,6 +3,16 @@ Fichero principal del programa con la ejecución
 """
 # Incluimos las funciones necesarias para los calculos, del archivo de lógica
 from irpf_logic import calcular_retencion, generar_informe
+from utils import mostrar_menu, validacion_dato_opcion, validacion_dato, mostrar_resultados
+
+# ---- CONTSTANTES DE INPUTS ----
+INPUT_OPCION = "Seleccione una opción: "
+INPUT_SALARIO = "Introduce tu sueldo bruto: "
+
+# ---- CONSTANTES DE ERROR ----
+ERROR_OPCION = "🛑 Opción no válida, debe ser un número entero"
+ERROR_SALARIO_NEG = "🛑 El suelo no puede ser negativo"
+ERROR_SALARIO_DATO = "🛑 Error debe introducir un valor válido.."
 
 
 def ejecutar_calculadora():
@@ -12,42 +22,17 @@ def ejecutar_calculadora():
     # Bucle para menú
     while True:
         # Mostramos menú
-        print("+------------------------------+")
-        print("| 💵 Calculadora de IRPF       |")
-        print("+------------------------------+")
-        print("| 1 - Realizar nuevo calculo   |")
-        print("| 2 - Salir del programa       |")
-        print("+------------------------------+\n")
+        mostrar_menu()
         # Solictamos opción al usuario
-        while True:
-            opcion = input("Seleccione una opción: ").strip()
-            try:
-                opcion = int(opcion)
-                break
-            except ValueError:
-                print("🛑 Opción no válida, debe ser un número entero")
-        print("")
+        opcion = validacion_dato_opcion(INPUT_OPCION, ERROR_OPCION)
         match opcion:
             case 1:
-                while True:
-                    bruto = input("Introduce tu sueldo bruto: ").strip()
-                    try:
-                        bruto = float(bruto)
-                        if bruto < 0:
-                            print("🛑 El suelo no puede ser negativo")
-                            continue
-                        break
-                    except ValueError:
-                        print("🛑 Error debe introducir un valor válido..")
+                bruto = validacion_dato(
+                    INPUT_SALARIO, ERROR_SALARIO_NEG, ERROR_SALARIO_DATO)
                 retencion = calcular_retencion(bruto)
                 informe = generar_informe(bruto, retencion)
                 # Mostramos los datos formateados
-                print("Resultados.")
-                print(f" - Sueldo bruto: {bruto} €")
-                print(f" - Impuesto a abonar: {retencion} €")
-                print(f" - Sueldo Neto: {informe['sueldo_neto']} €")
-                print(
-                    f" - Porcentaje apliado: {informe['porcentaje_retencion']}%")
+                mostrar_resultados(bruto, retencion, informe)
             case 2:
                 print("🖐 Saliendo del programa....")
                 break
